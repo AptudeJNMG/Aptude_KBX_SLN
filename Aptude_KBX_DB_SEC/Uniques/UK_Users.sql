@@ -1,0 +1,3 @@
+﻿ALTER TABLE [SCH_Aptude_KBX].[TBL_Users]
+	ADD CONSTRAINT [UK_Users]
+	UNIQUE (Mail)

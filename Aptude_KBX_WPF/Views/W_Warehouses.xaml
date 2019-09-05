@@ -1,0 +1,39 @@
+﻿<Window x:Class="Aptude_KBX_WPF.Views.W_Warehouses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aptude_KBX_WPF.Views"
+        xmlns:viewmodels="clr-namespace:Aptude_KBX_WPF.ViewModels"
+        mc:Ignorable="d"
+        Title="W_Warehouses" Height="450" Width="800">
+    <Window.DataContext>
+        <viewmodels:VM_WareHouses />
+    </Window.DataContext>
+    <ScrollViewer>
+        <StackPanel>
+            <StackPanel>
+                <Label Content="SoftSkill"></Label>
+                <TextBox Text="{Binding Busqueda}"></TextBox>
+                <Button Content="Buscar" Command="{Binding ComBuscar}"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding ComAgregar}"  Style="{StaticResource Agregar}" />
+                <Button Command="{Binding ComEditar}" Style="{StaticResource Editar}"/>
+                <Button Command="{Binding ComEliminar}" Style="{StaticResource Quitar}"/>
+            </StackPanel>
+            <ListView x:Name="lstLista" ItemsSource="{Binding Lista}" SelectedItem="{Binding Seleccionado}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Nombre" 
+                                        DisplayMemberBinding="{Binding Nombre}" 
+                                        Width="Auto"></GridViewColumn>
+                        <GridViewColumn Header="Descripcion" 
+                                        DisplayMemberBinding="{Binding Descripcion}" 
+                                        Width="Auto"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

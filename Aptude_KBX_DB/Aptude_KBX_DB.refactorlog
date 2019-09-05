@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="e7772833-949b-4612-a782-dc8838c9bc9a" ChangeDateTime="08/28/2019 16:10:46">
+    <Property Name="ElementName" Value="[dbo].[TBL_Ships].[DateRecive]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_Ships]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateRecived" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bd9d1ea7-11ef-4347-8d86-baf4b5538237" ChangeDateTime="08/28/2019 16:10:49">
+    <Property Name="ElementName" Value="[dbo].[TBL_Ships].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_Ships]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateDeparted" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="45fb1b19-7330-4a34-8871-0883ef0245aa" ChangeDateTime="08/28/2019 16:11:34">
+    <Property Name="ElementName" Value="[dbo].[TBL_Ships].[DateRecived]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_Ships]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateRecivedExpects" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2f35f350-5cdd-4dc6-9f1f-39ea4b8996d8" ChangeDateTime="08/28/2019 16:14:58">
+    <Property Name="ElementName" Value="[dbo].[TBL_ShipItems].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_ShipItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdShip" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="18d45a1d-a3fa-4386-afc8-b701beabb7ca" ChangeDateTime="08/28/2019 16:15:19">
+    <Property Name="ElementName" Value="[dbo].[TBL_ShipItems].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_ShipItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="13d5411a-a1b4-48fd-9fde-fe353864e92d" ChangeDateTime="08/28/2019 16:16:52">
+    <Property Name="ElementName" Value="[SCH_Aptude_KBX].[TBL_ShipDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SCH_Aptude_KBX].[TBL_ShipDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdShip" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1ca3dc99-7b0a-42a8-8ca7-91fba6c22daf" ChangeDateTime="08/28/2019 17:31:38">
+    <Property Name="ElementName" Value="[SCH_Aptude_KBX].[TBL_Ships].[IdStatusShip]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SCH_Aptude_KBX].[TBL_Ships]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StatusShip" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d3b061d-8e28-462d-b872-61711b73d7c8" ChangeDateTime="08/28/2019 18:17:51">
+    <Property Name="ElementName" Value="[SCH_Aptude_KBX].[TBL_Clients].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SCH_Aptude_KBX].[TBL_Clients]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FirstName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="60b8b190-b5bb-490d-8e7f-210b539da0e1" ChangeDateTime="08/28/2019 18:17:57">
+    <Property Name="ElementName" Value="[SCH_Aptude_KBX].[TBL_Users].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SCH_Aptude_KBX].[TBL_Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FirstName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9e2c00f7-206e-4b4a-8ecd-3b8f1a5c1121" ChangeDateTime="09/04/2019 20:50:00">
+    <Property Name="ElementName" Value="[dbo].[TBL_InternationalZip].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_InternationalZip]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCountry" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cbf40fd9-971b-4b41-ac95-de8105005d4b" ChangeDateTime="09/04/2019 20:50:12">
+    <Property Name="ElementName" Value="[dbo].[TBL_InternationalZip].[In]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_InternationalZip]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InOrOut" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="53896355-8f0c-45fa-9c62-558badf7ad84" ChangeDateTime="09/04/2019 20:51:48">
+    <Property Name="ElementName" Value="[dbo].[TBL_InternationalRates].[IdCountry]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_InternationalRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCountryTo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fb6dea40-f26b-483f-880f-c7e2f5c025f4" ChangeDateTime="09/05/2019 20:44:52">
+    <Property Name="ElementName" Value="[SCH_Aptude_KBX].[TBL_LocalRates].[IdState]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SCH_Aptude_KBX].[TBL_LocalRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdStateFrom" />
+  </Operation>
+</Operations>

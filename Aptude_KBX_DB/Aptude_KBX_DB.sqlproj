@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Aptude_KBX_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4b71b410-7453-476d-b527-7cccf89c0317}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Aptude_KBX_DB</RootNamespace>
+    <AssemblyName>Aptude_KBX_DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Security" />
+    <Folder Include="Tables" />
+    <Folder Include="SP" />
+    <Folder Include="Functions" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Foreigns" />
+    <Folder Include="Uniques" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Schemas\SCH_Aptude_KBX.sql" />
+    <Build Include="Tables\TBL_Clients.sql" />
+    <Build Include="Tables\TBL_Users.sql" />
+    <Build Include="Tables\TBL_Ships.sql" />
+    <Build Include="Tables\TBL_ShipItems.sql" />
+    <Build Include="Tables\TBL_ShipDetails.sql" />
+    <Build Include="Tables\TBL_WareHouses.sql" />
+    <Build Include="Foreigns\FK_Ships_Clients.sql" />
+    <Build Include="Foreigns\FK_ShDetails_Ships.sql" />
+    <Build Include="SP\SP_C_Ships.sql" />
+    <Build Include="SP\SP_C_Users.sql" />
+    <Build Include="Foreigns\FK_ShItems_Ships.sql" />
+    <Build Include="SP\SP_C_Clients.sql" />
+    <Build Include="Foreigns\FK_ShDetails_WHouses.sql" />
+    <Build Include="Foreigns\FK_ShDetails_WHouses2.sql" />
+    <Build Include="Functions\FN_NewShip.sql" />
+    <Build Include="Uniques\UK_Clients.sql" />
+    <Build Include="Uniques\UK_Users.sql" />
+    <Build Include="SP\SP_C_WareHouses.sql" />
+    <Build Include="SP\SP_C_ShipDetails.sql" />
+    <Build Include="Functions\FN_NewShipItem.sql" />
+    <Build Include="SP\SP_C_ShipItems.sql" />
+    <Build Include="SP\SP_U_ShDetailArrived.sql" />
+    <Build Include="SP\SP_R_ShDetailForArriving.sql" />
+    <Build Include="SP\SP_R_ShipGetByIdClient.sql" />
+    <Build Include="SP\SP_R_ShipGetByGuid.sql" />
+    <Build Include="SP\SP_R_ShipFind.sql" />
+    <Build Include="Tables\TBL_Countries.sql" />
+    <Build Include="Tables\TBL_InternationalRates.sql" />
+    <Build Include="Tables\TBL_InternationalZip.sql" />
+    <Build Include="Tables\TBL_LocalRates.sql" />
+    <Build Include="Tables\TBL_TransportType.sql" />
+    <Build Include="Tables\TBL_States.sql" />
+    <Build Include="Foreigns\FK_LocalRates_StatesFrom.sql" />
+    <Build Include="Foreigns\FK_LocalRates_StatesTo.sql" />
+    <Build Include="Foreigns\FK_IZip_Country.sql" />
+    <Build Include="Foreigns\FK_IRates_CountryFrom.sql" />
+    <Build Include="Foreigns\FK_IRates_CountryTo.sql" />
+    <Build Include="Foreigns\FK_IRates_TType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Aptude_KBX_DB.refactorlog" />
+  </ItemGroup>
+</Project>
