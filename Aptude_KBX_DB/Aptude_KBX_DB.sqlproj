@@ -104,8 +104,13 @@
     <Build Include="Foreigns\FK_IRates_CountryFrom.sql" />
     <Build Include="Foreigns\FK_IRates_CountryTo.sql" />
     <Build Include="Foreigns\FK_IRates_TType.sql" />
+    <Build Include="Foreigns\FK_WareHouses_States.sql" />
+    <Build Include="Foreigns\FK_States_Countries.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Aptude_KBX_DB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Aptude_KBX_DB.publish.xml" />
   </ItemGroup>
 </Project>
